@@ -24,14 +24,13 @@ db_menu() {
 
 main_menu() {
 	PS3="Choose an option: "
-	options=("Create Database" "List Databases " "Connect to Database"  "Drop Database"  "Exit")
-
+	options=("Create Database" "List Databases " "Connect to Database"  "Drop Database" "Exit")
 	select choice in "${options[@]}"; do 
 		case $REPLY in 
 			1) create_database ;;
 			2) list_databases ;;
 			3) connect_database ;;
-			4) drop_database ;;
+			4) drop_database ;;      
 			5) exit 0 ;;
 			*) echo "Invalid option . Try again." ;;
 
